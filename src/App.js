@@ -3,6 +3,7 @@ import "./App.css";
 //import ReactGlobeGl from "react-globe.gl";
 import CountryPage from "./CountryPage";
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 function App() {
   const [country, setCountry] = useState("Canada");
@@ -15,6 +16,7 @@ function App() {
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
         onGlobeClick
       /> */}
+      <Button>Test</Button>
     </div>
   );
 }
