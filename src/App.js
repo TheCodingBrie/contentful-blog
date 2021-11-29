@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      <outlet />
       <CountryPage country={country} />
       {/* <ReactGlobeGl
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
