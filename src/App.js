@@ -4,12 +4,14 @@ import "./App.css";
 import CountryPage from "./CountryPage";
 import React from "react";
 import Button from "react-bootstrap/Button";
+import Menu from "./Menu";
 
 function App() {
   const [country, setCountry] = useState("Canada");
 
   return (
     <div className="App">
+      <Menu />
       <outlet />
       <CountryPage country={country} />
       {/* <ReactGlobeGl
