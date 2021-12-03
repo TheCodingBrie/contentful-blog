@@ -1,38 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { client } from "./client";
+
 import Country from "./Country";
+import useGetEntries from "./useGetEntries";
 
-export default function CountryPage({ country }) {
-  const [content, setContent] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [countries, setCountries] = useState([]);
-  const [recipes, setRecipes] = useState([]);
-
-  useEffect(() => loadContent(), []);
-  useEffect(() => divideContent(), [content]);
-
-  function loadContent() {
-    setIsLoading(true);
-    client
-      .getEntries()
-      .then((response) => {
-        setIsLoading(false);
-        setContent(
-          response.items.map((item) => {
-            return item.fields;
-          })
-        );
-        divideContent();
-      })
-      .catch(() => setError(true));
-  }
-
-  const divideContent = () => {
-    setCountries(content.filter((content) => content.countryTitle));
-    setRecipes(content.filter((content) => content.Title));
-  };
-
+export default function CountryPage() {
+  const { error, isLoading, recipes, countries } = useGetEntries();
   function displayContent() {
     if (error) return <div>Something went wrong, try reloading the page</div>;
     // add a loading image?
@@ -40,7 +12,6 @@ export default function CountryPage({ country }) {
 
     return <Country countries={countries} />;
   }
-
   return (
     <div className="container">
       <header>
