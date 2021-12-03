@@ -14,8 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <Button> Test Button </Button>
-      <CountryPage country={country} />
+     
+      {/* <CountryPage country={country} /> */}
       <Recipe />
 
       
