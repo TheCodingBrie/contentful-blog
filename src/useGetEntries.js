@@ -8,8 +8,6 @@ export default function useGetEntries() {
   const [countries, setCountries] = useState([]);
   const [recipes, setRecipes] = useState([]);
 
-  console.log(content);
-
   useEffect(loadContent, []);
   useEffect(divideContent, [content]);
 
@@ -24,8 +22,6 @@ export default function useGetEntries() {
             return item.fields;
           })
         );
-
-        divideContent();
       })
       .catch(() => setError(true));
   }
