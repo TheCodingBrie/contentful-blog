@@ -3,3 +3,100 @@
     height: 100px;
     border: solid black;
 }
+body, html{
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-top: 35px;
+    margin-left: 100px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.menu {
+
+    display: flex;
+    flex-direction: column;
+    padding-top : 150px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 10px;
+    width: 15%;
+    z-index: 1;
+    position: absolute;
+    background-color: #656670;
+    opacity: .8;
+    border-radius: 5px;
+    margin: 10px;
+    border: 6px #908D9D solid;
+    transition: opacity 1s ease-in;
+
+}
+
+.no-menu {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    display: none;
+
+}
+
+.allRecipes, .countryMenu, .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #908D9D;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.allRecipes:hover, .countryMenu:hover, .contact:hover {
+    background-color: #817782;
+}
+
+.countryMenu {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 16px;
+    width: 90%;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #908D9D;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+  
+.dropdown a:hover {
+    background-color: #817782;
+    color: black;
+}
+  
+.countryMenu:hover .dropdown {
+    display: block;
+}
+  
+
+
+.globe {
+    z-index: 0;
+    position: absolute;
+}
