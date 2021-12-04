@@ -12,14 +12,11 @@ function App() {
     <div className="App">
       <outlet />
       <CountryPage country={country} />
-      {/* <ReactGlobeGl
 
       <ReactGlobeGl
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
         onGlobeClick
-      /> */}
-      <Button>Test</Button>
       />
       {/* <Button>Test</Button> */}
     </div>
