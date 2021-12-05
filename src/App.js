@@ -8,7 +8,7 @@ import ReactModal from "react-modal";
 import ModalWindow from "./ModalWindow";
 import Recipe from "./Recipe";
 
-ReactModal.setAppElement("#root");
+// ReactModal.setAppElement("#root");
 
 function App({ countries, error, isLoading }) {
   const [show, setShow] = useState(false);
@@ -31,7 +31,7 @@ function App({ countries, error, isLoading }) {
         onGlobeClick
       />
       <ModalWindow show={show} setShow={setShow} /> */}
-      <Recipe />
+      {/* <Recipe /> */}
     </div>
   );
 }
