@@ -1,7 +1,5 @@
-import { Button, Container } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
+import React from "react";
 import useGetEntries from "./useGetEntries";
-import marked from 'marked';
 
 
 export default function Recipe() {
@@ -18,7 +16,7 @@ export default function Recipe() {
     return (
       <div>
         
-        <div className="recipeImage"><img width="300px" src={recipe.recipeImage.fields.file.url}alt=""></img></div>
+        <div className="recipeImage"><img width="300px" src={recipe.recipeImage.fields.file.url} alt=" "></img></div>
            
         <div className="recipeTitle"><h1>{recipe.title}</h1></div>
 
