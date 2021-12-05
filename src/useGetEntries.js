@@ -28,7 +28,7 @@ export default function useGetEntries() {
 
   function divideContent() {
     setCountries(content.filter((content) => content.countryTitle));
-    setRecipes(content.filter((content) => content.Title));
+    setRecipes(content.filter((content) => content.title));
   }
 
   return { error, isLoading, recipes, countries };

@@ -4,21 +4,28 @@ import ReactGlobeGl from "react-globe.gl";
 import React from "react";
 import Menu from "./Menu";
 import ReactModal from "react-modal";
+import ModalWindow from "./ModalWindow";
 
 ReactModal.setAppElement("#root");
 
-function App() {
+function App({ recipes, countries, error, isLoading }) {
   const [show, setShow] = useState(false);
 
+  function handleShow() {
+    setShow(!show);
+  }
   return (
     <div className="App">
-      <Menu />
-      <outlet />
+      <Menu countries={countries} isLoading={isLoading} error={error} />
       <ReactGlobeGl
         className="globe"
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
       />
+      <ModalWindow show={show} setShow={setShow} />
+      <button className="dummy" onClick={handleShow}>
+        X
+      </button>
     </div>
   );
 }
