@@ -52,6 +52,12 @@ export default function Menu({ countries, isLoading, error, setShow }) {
         <NavLink onClick={handleModal} className="contact" to="/contact">
           Contact
         </NavLink>
+        <NavLink onClick={handleModal} className="contact" to="/country">
+          Country
+        </NavLink>
+        <NavLink onClick={handleModal} className="contact" to="/recipe">
+          Recipe
+        </NavLink>
       </div>
     </>
   );

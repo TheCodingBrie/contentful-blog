@@ -5,11 +5,14 @@ import React from "react";
 import Menu from "./Menu";
 import ReactModal from "react-modal";
 import ModalWindow from "./ModalWindow";
+import Country from "./Country";
 
 ReactModal.setAppElement("#root");
 
-function App({ countries, error, isLoading }) {
+function App({ recipes, countries, error, isLoading }) {
   const [show, setShow] = useState(false);
+
+  console.log(2, recipes);
 
   return (
     <div className="App">
@@ -20,9 +23,9 @@ function App({ countries, error, isLoading }) {
         setShow={setShow}
       />
       <ReactGlobeGl
-        className="globe"
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+        onGlobeClick
       />
       <ModalWindow show={show} setShow={setShow} />
     </div>
