@@ -5,7 +5,6 @@ import React from "react";
 import Menu from "./Menu";
 import ReactModal from "react-modal";
 import ModalWindow from "./ModalWindow";
-import Recipe from "./Recipe";
 
 ReactModal.setAppElement("#root");
 
@@ -14,7 +13,7 @@ function App({ countries, error, isLoading }) {
 
   return (
     <div className="App">
-      {/* <Menu
+      <Menu
         countries={countries}
         isLoading={isLoading}
         error={error}
@@ -25,8 +24,7 @@ function App({ countries, error, isLoading }) {
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
       />
-      <ModalWindow show={show} setShow={setShow} /> */}
-      <Recipe />
+      <ModalWindow show={show} setShow={setShow} />
     </div>
   );
 }
