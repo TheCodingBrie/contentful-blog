@@ -29,4 +29,4 @@ function App({ countries, error, isLoading }) {
   );
 }
 
-export default App;
+export default App
