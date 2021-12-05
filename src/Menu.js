@@ -2,35 +2,35 @@ import React from "react";
 import { useState } from "react";
 import logo from "./images/logo.png";
 import "./App.css";
-import useGetEntries from "./useGetEntries";
+import { NavLink } from "react-router-dom";
 
-export default function Menu() {
-  const [navbar, setNavbar] = useState(false);
+export default function Menu({ countries, isLoading, error, setShow }) {
+  const [navbar, setNavbar] = useState(true);
   console.log(navbar);
   const handleMenu = () => {
     setNavbar(!navbar);
   };
 
-  const { error, isLoading, recipes, countries } = useGetEntries();
-
-  console.log(countries);
   const displayMenu = () => {
     if (error) return <div>Error, please reload</div>;
-    // add a loading image?
     if (isLoading) return <div>Loading</div>;
 
     return countries.map((country) => {
       return (
-        <a href="{Navlink}">
+        <NavLink to={`/${country.countryTitle}`}>
           {country.countryTitle}
           <img
             width="25px"
             src={country.countryFlag.fields.file.url}
             alt=""
           ></img>
-        </a>
+        </NavLink>
       );
     });
+  };
+
+  const handleModal = () => {
+    setShow(true);
   };
   return (
     <>
@@ -42,13 +42,19 @@ export default function Menu() {
         alt=""
       ></img>
       <div className={`menu ${navbar ? "no-menu" : ""}`}>
-        <div className="allRecipes">All recipes</div>
+        <NavLink onClick={handleModal} className="allRecipes" to="/allrecipes">
+          All Recipes
+        </NavLink>
         <div className="countryMenu">
           <div>Countries</div>
           <div className="dropdown">{displayMenu()}</div>
         </div>
-        <div className="contact">Contact</div>
+        <NavLink onClick={handleModal} className="contact" to="/contact">
+          Contact
+        </NavLink>
       </div>
     </>
   );
 }
+
+<div className="allRecipes">All recipes</div>;
