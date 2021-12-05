@@ -1,25 +1,22 @@
 import { useState, useEffect, useMemo } from "react";
 import "./App.css";
 import ReactGlobeGl from "react-globe.gl";
-import CountryPage from "./CountryPage";
 import React from "react";
 import Menu from "./Menu";
 import ReactModal from "react-modal";
 import ModalWindow from "./ModalWindow";
-import Recipe from "./Recipe";
+import Country from "./Country";
 
-// ReactModal.setAppElement("#root");
+ReactModal.setAppElement("#root");
 
-function App({ countries, error, isLoading }) {
+function App({ recipes, countries, error, isLoading }) {
   const [show, setShow] = useState(false);
+
+  console.log(2, recipes);
 
   return (
     <div className="App">
-      <CountryPage />
-      <Menu />
-      <outlet />
-
-      {/* <Menu
+      <Menu
         countries={countries}
         isLoading={isLoading}
         error={error}

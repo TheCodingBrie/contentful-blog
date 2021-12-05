@@ -3,6 +3,8 @@ import useGetEntries from "./useGetEntries";
 import App from "./App";
 import AllRecipes from "./AllRecipes";
 import Contact from "./Contact";
+import Country from "./Country";
+import Recipe from "./Recipe";
 
 export default function WFFRoutes() {
   const { error, isLoading, recipes, countries } = useGetEntries();
@@ -19,6 +21,18 @@ export default function WFFRoutes() {
           path="allrecipes"
           element={
             <AllRecipes recipes={recipes} isLoading={isLoading} error={error} />
+          }
+        />
+        <Route
+          path="/country"
+          element={
+            <Country recipes={recipes} isLoading={isLoading} error={error} />
+          }
+        />
+        <Route
+          path="/recipe"
+          element={
+            <Recipe recipes={recipes} isLoading={isLoading} error={error} />
           }
         />
         <Route path="contact" element={<Contact />} />

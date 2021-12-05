@@ -1,13 +1,12 @@
-import Country from "./Country";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Image from "react-bootstrap/Image";
-import "./CountryCard.css";
+import "./RecipeCard.css";
 
-export default function () {
+export default function RecipeCard() {
   return (
     <CardGroup>
       <Card

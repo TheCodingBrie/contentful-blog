@@ -2,10 +2,7 @@ import { Button, Container } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import useGetEntries from "./useGetEntries";
 
-export default function Recipe() {
-  const { error, isLoading, recipes } = useGetEntries();
-  console.log(recipes);
-
+export default function Recipe({ recipes, isLoading, error }) {
   const displayRecipe = () => {
     if (error) return <div>Error, please reload</div>;
     if (isLoading) return <div>Loading</div>;
