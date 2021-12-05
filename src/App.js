@@ -3,22 +3,25 @@ import "./App.css";
 import ReactGlobeGl from "react-globe.gl";
 import CountryPage from "./CountryPage";
 import React from "react";
-import Button from "react-bootstrap/Button";
+import Menu from "./Menu";
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement("#root");
 
 function App() {
-  const [country, setCountry] = useState("Canada");
+  const [show, setShow] = useState(false);
 
   return (
     <div className="App">
+      <CountryPage />
+      <Menu />
       <outlet />
-      <CountryPage country={country} />
 
       <ReactGlobeGl
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
         onGlobeClick
       />
-      {/* <Button>Test</Button> */}
     </div>
   );
 }
