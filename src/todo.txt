@@ -1,5 +1,3 @@
-- all recipe page
-- useGetEntry hook
-- Globe Marker
-
-- git ignore
+-recipes
+-integrate other parts
+-deploy

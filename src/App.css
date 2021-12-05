@@ -52,10 +52,13 @@ body, html{
     background-color: #908D9D;
     font-family: sans-serif;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
 .allRecipes:hover, .countryMenu:hover, .contact:hover {
     background-color: #817782;
+    color: black;
 }
 
 .countryMenu {
@@ -82,22 +85,20 @@ body, html{
     justify-content: space-between;
     border-radius: 5px;
 }
-  
+
 .dropdown a:hover {
     background-color: #817782;
     color: black;
 }
-  
+
 .countryMenu:hover .dropdown {
     display: block;
 }
-  
 
 .globe {
     z-index: 0;
     position: absolute;
 }
-
 
 .Overlay {
     display: flex;
@@ -114,10 +115,15 @@ body, html{
     padding: 0px;
 }
 
-.dummy {
-    position: fixed;
-    top: 0;
-    right: 0;
+.modal-topbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.modal-button {
+    background-color: #908D9D;
+    border-radius: 5px;
 }
 
 .outlet {

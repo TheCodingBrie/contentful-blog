@@ -11,6 +11,10 @@ export default function modalWindow({ show, setShow }) {
     },
   };
 
+  const handleModal = () => {
+    setShow(false);
+  };
+
   return (
     <Modal
       style={customStyles}
@@ -18,6 +22,11 @@ export default function modalWindow({ show, setShow }) {
       onRequestClose={setShow}
       overlayClassName="Overlay"
     >
+      <div className="modal-topbar">
+        <button onClick={handleModal} className="modal-button">
+          X
+        </button>
+      </div>
       <Outlet />
     </Modal>
   );

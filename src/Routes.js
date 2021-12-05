@@ -12,12 +12,7 @@ export default function WFFRoutes() {
       <Route
         path="/"
         element={
-          <App
-            recipes={recipes}
-            countries={countries}
-            isLoading={isLoading}
-            error={error}
-          />
+          <App countries={countries} isLoading={isLoading} error={error} />
         }
       >
         <Route
