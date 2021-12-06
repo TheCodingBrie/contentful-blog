@@ -6,38 +6,27 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Image from "react-bootstrap/Image";
 import "./RecipeCard.css";
 
-export default function RecipeCard() {
+export default function RecipeCard(recipe) {
   return (
-    <CardGroup>
-      <Card
-        className="my-3  "
-        style={{
-          width: "25rem",
-          display: "flex",
-          flexdirection: "col",
-        }}
-      >
-        <Card.Header
-          className="display-4"
-          style={{
-            background: "yellow",
-          }}
-        >
-          Recipe Title
-        </Card.Header>
-        <Row className="g-2">
-          <Col xs="5">
-            <Card.Img img-fluid src="images/food.jpeg" />
-          </Col>
-          <Col xs="5">
+    <Container d-flex flex-column>
+      <Row className="row-cols-2 g-3 my-2 ">
+        <Col col-sm-4 col-sm-4>
+          <Card
+            className="my-2   d-flex flex-column"
+            style={{ background: "#fcc5c5" }}
+          >
+            <Card.Img variant="top" src="images/food.jpeg"></Card.Img>
             <Card.Body>
+              <Card.Title className="text-center">
+                <h5>Recipe Title</h5>
+              </Card.Title>
               <Card.Text className="text-start">
-                <h4>Recipe Description</h4> Lorem ipsum dolor sit amet,
+                <h6>Recipe Description:</h6> Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit. Sed eget dolor tempus, semper
                 mauris nec, ornare sapien. Nullam a malesuada libero. Nullam
                 accumsan tellus tristique, interdum diam quis, ultrices urna.
               </Card.Text>
-              <Card.Text className="text-start h4">
+              <Card.Text className="text-start h5">
                 Cooking Time : 3 hours
               </Card.Text>
               <Card.Img
@@ -51,9 +40,9 @@ export default function RecipeCard() {
                 style={{ width: "70px" }}
               />
             </Card.Body>
-          </Col>
-        </Row>
-      </Card>
-    </CardGroup>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }

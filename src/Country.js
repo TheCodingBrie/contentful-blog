@@ -15,9 +15,15 @@ export default function Country({ recipes, isLoading, error }) {
     if (isLoading) return <div>Content loading, please remain seated</div>;
 
     return (
-      <Container className="d-flex flex-column ">
+      <Container className="d-flex flex-column bg-$cyan-200   ">
+        <h1 className="text-center">Country Page</h1>
         <div className="flag-image">
-          <img className="rounded" src="images/germanflag.jpeg" alt="" />
+          <img
+            style={{ width: "15vh" }}
+            className="rounded"
+            src="images/germanflag.jpeg"
+            alt=""
+          />
         </div>
         {recipes.map((recipe) => {
           return <RecipeCard recipe={recipe} />;
