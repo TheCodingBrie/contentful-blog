@@ -9,7 +9,6 @@ import Recipe from "./Recipe";
 export default function WFFRoutes() {
   const { error, isLoading, recipes, countries } = useGetEntries();
 
-  console.log(recipes);
   return (
     <Routes>
       <Route

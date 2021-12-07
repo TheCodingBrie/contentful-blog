@@ -1,11 +1,8 @@
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
 import "./RecipeCard.css";
 
 export default function RecipeCard({ recipe }) {
-  console.log(recipe);
   return (
     <Col md={5}>
       <Card className="  my-2" style={{ background: "#fcc5c5" }}>

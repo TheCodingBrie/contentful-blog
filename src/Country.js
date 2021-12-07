@@ -23,7 +23,7 @@ export default function Country({ recipes, isLoading, error }) {
         <Container>
           <Row className="g-3 my-2 ">
             {recipes.map((recipe) => {
-              return <RecipeCard recipe={recipe} />;
+              return <RecipeCard key={recipe.title} recipe={recipe} />;
             })}
           </Row>
         </Container>

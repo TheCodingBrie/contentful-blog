@@ -24,7 +24,6 @@ function App({ countries, error, isLoading }) {
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
       />
       <ModalWindow show={show} setShow={setShow} />
-      <Recipe />
     </div>
   );
 }
