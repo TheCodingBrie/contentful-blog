@@ -1,3 +1,6 @@
+import { marked } from "marked";
+import "./Recipe.css";
+
 export default function Recipe({ recipes, isLoading, error }) {
   const displayRecipe = () => {
     if (error) return <div>Error, please reload</div>;
@@ -5,14 +8,16 @@ export default function Recipe({ recipes, isLoading, error }) {
 
     const recipe = recipes[0];
 
+    console.log(
+      recipe.recipeInfos.map((info) => {
+        return info;
+      })
+    );
+    const getIngredient = marked(recipe.recipeIngredients);
     return (
       <div>
         <div className="recipeImage">
-          <img
-            width="300px"
-            src={recipe.recipeImage.fields.file.url}
-            alt=""
-          ></img>
+          <img src={recipe.recipeImage.fields.file.url} alt=""></img>
         </div>
 
         <div className="recipeTitle">
@@ -20,7 +25,9 @@ export default function Recipe({ recipes, isLoading, error }) {
         </div>
 
         <div className="recipeInfos">
-          <p>{recipe.recipeInfos}</p>
+          {recipe.recipeInfos.map((info) => {
+            return <p>{info}</p>;
+          })}
         </div>
 
         <div className="recipeDescription">
@@ -29,7 +36,7 @@ export default function Recipe({ recipes, isLoading, error }) {
 
         <div className="ingedients">
           {" "}
-          <p>{recipe.recipeIngredients}</p>{" "}
+          <section dangerouslySetInnerHTML={{ __html: getIngredient }} />{" "}
         </div>
 
         <div className="instructions">

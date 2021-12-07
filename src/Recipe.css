@@ -1,0 +1,22 @@
+.recipeImage {
+/* object-fit:cover;*/
+
+    width: 100%; 
+}
+
+.recipeTitle{
+    margin: 5%;
+    text-align: center;
+    text-shadow: 2px 2px rgb(208, 208, 231);
+    font-style: italic;
+  }
+
+  .recipeInfos>p {
+      display: inline;
+      padding: 20px 20px 20px 20px;
+      
+  }
+
+  .recipeDescription>p {
+      margin: 4%;
+  }
