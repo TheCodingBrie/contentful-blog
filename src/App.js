@@ -5,6 +5,7 @@ import React from "react";
 import Menu from "./Menu";
 import ReactModal from "react-modal";
 import ModalWindow from "./ModalWindow";
+import Recipe from "./Recipe";
 import Country from "./Country";
 
 ReactModal.setAppElement("#root");
