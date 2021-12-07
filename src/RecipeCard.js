@@ -2,14 +2,19 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import "./RecipeCard.css";
 
-export default function RecipeCard({ recipe }) {
+export default function RecipeCard({ recipe, isLoading, error }) {
+  if (error) return <div>Something went wrong, try reloading the page</div>;
+  if (isLoading) return <div>Content loading, please remain seated</div>;
   return (
     <Col md={5}>
-      <Card className="  my-2" style={{ background: "#fcc5c5" }}>
-        <Card.Imgyu
+      <Card
+        className="  my-2"
+        style={{ background: "#fcc5c5", cursor: "pointer" }}
+      >
+        <Card.Img
           variant="top"
           src={recipe.recipeImage.fields.file.url}
-        ></Card.Imgyu>
+        ></Card.Img>
         <Card.Body>
           <Card.Title className="text-center">
             <h5>{recipe.title}</h5>

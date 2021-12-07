@@ -5,13 +5,8 @@ export default function Recipe({ recipes, isLoading, error }) {
     if (error) return <div>Error, please reload</div>;
     if (isLoading) return <div>Loading</div>;
 
-    const recipe = recipes[10];
+    const recipe = recipes[0];
 
-    console.log(
-      recipe.recipeInfos.map((info) => {
-        return info;
-      })
-    );
     return (
       <div>
         <div className="recipeImage">

@@ -16,7 +16,11 @@ export default function Menu({ countries, isLoading, error, setShow }) {
 
     return countries.map((country) => {
       return (
-        <NavLink key={country.countryTitle} to={`/${country.countryTitle}`}>
+        <NavLink
+          onClick={handleModal}
+          key={country.countryTitle}
+          to={`/${country.countryTitle}`}
+        >
           {country.countryTitle}
           <img
             width="25px"
