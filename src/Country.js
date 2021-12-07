@@ -15,7 +15,7 @@ export default function Country({ recipes, isLoading, error }) {
     if (isLoading) return <div>Content loading, please remain seated</div>;
 
     return (
-      <Container className="d-flex flex-column bg-$cyan-200   ">
+      <Container className="d-flex flex-column    ">
         <h1 className="text-center">Country Page</h1>
         <div className="flag-image">
           <img
@@ -25,9 +25,13 @@ export default function Country({ recipes, isLoading, error }) {
             alt=""
           />
         </div>
-        {recipes.map((recipe) => {
-          return <RecipeCard recipe={recipe} />;
-        })}
+        <Container>
+          <Row className="g-3 my-2 ">
+            {recipes.map((recipe) => {
+              return <RecipeCard recipe={recipe} />;
+            })}
+          </Row>
+        </Container>
       </Container>
     );
   }

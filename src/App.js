@@ -28,7 +28,7 @@ function App({ recipes, countries, error, isLoading }) {
         onGlobeClick
       />
       <ModalWindow show={show} setShow={setShow} />
-      {/* <Recipe /> */}
+      <Recipe />
     </div>
   );
 }
