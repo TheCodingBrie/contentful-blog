@@ -6,10 +6,10 @@ export default function RecipeCard({ recipe }) {
   return (
     <Col md={5}>
       <Card className="  my-2" style={{ background: "#fcc5c5" }}>
-        <Card.Img
+        <Card.Imgyu
           variant="top"
           src={recipe.recipeImage.fields.file.url}
-        ></Card.Img>
+        ></Card.Imgyu>
         <Card.Body>
           <Card.Title className="text-center">
             <h5>{recipe.title}</h5>
