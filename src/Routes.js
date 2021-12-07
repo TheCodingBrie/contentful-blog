@@ -9,6 +9,7 @@ import Recipe from "./Recipe";
 export default function WFFRoutes() {
   const { error, isLoading, recipes, countries } = useGetEntries();
 
+  console.log(recipes);
   return (
     <Routes>
       <Route
@@ -24,13 +25,13 @@ export default function WFFRoutes() {
           }
         />
         <Route
-          path="/country"
+          path=":country"
           element={
             <Country recipes={recipes} isLoading={isLoading} error={error} />
           }
         />
         <Route
-          path="/recipe"
+          path="recipe"
           element={
             <Recipe recipes={recipes} isLoading={isLoading} error={error} />
           }

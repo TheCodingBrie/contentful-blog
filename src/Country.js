@@ -1,11 +1,5 @@
 // import React, { useState, useEffect } from "react";
-import { client } from "./client";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-import Image from "react-bootstrap/Image";
 import RecipeCard from "./RecipeCard";
 import "./Country.css";
 
@@ -20,7 +14,7 @@ export default function Country({ recipes, isLoading, error }) {
           <img className="rounded" src="images/germanflag.jpeg" alt="" />
         </div>
         {recipes.map((recipe) => {
-          return <RecipeCard recipe={recipe} />;
+          return <RecipeCard key={recipe.title} recipe={recipe} />;
         })}
       </Container>
     );

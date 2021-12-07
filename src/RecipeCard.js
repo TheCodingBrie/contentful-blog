@@ -1,9 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import Image from "react-bootstrap/Image";
 import "./RecipeCard.css";
 
 export default function RecipeCard() {

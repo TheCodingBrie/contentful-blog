@@ -20,15 +20,15 @@ export default function useGetEntries() {
         setContent(
           response.items.map((item) => {
             return item.fields;
-          }) || []
+          })
         );
       })
       .catch(() => setError(true));
   }
 
   function divideContent() {
-    setCountries(content.filter((content) => content.countryTitle) || []);
-    setRecipes(content.filter((content) => content.title) || []);
+    setCountries(content.filter((content) => content.countryTitle));
+    setRecipes(content.filter((content) => content.title));
   }
 
   return { error, isLoading, recipes, countries };

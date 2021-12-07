@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 
 export default function Menu({ countries, isLoading, error, setShow }) {
   const [navbar, setNavbar] = useState(true);
-  console.log(navbar);
   const handleMenu = () => {
     setNavbar(!navbar);
   };
@@ -17,7 +16,7 @@ export default function Menu({ countries, isLoading, error, setShow }) {
 
     return countries.map((country) => {
       return (
-        <NavLink to={`/${country.countryTitle}`}>
+        <NavLink key={country.countryTitle} to={`/${country.countryTitle}`}>
           {country.countryTitle}
           <img
             width="25px"
