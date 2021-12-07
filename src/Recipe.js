@@ -1,4 +1,3 @@
-import { marked } from "marked";
 import "./Recipe.css";
 
 export default function Recipe({ recipes, isLoading, error }) {
@@ -6,18 +5,21 @@ export default function Recipe({ recipes, isLoading, error }) {
     if (error) return <div>Error, please reload</div>;
     if (isLoading) return <div>Loading</div>;
 
-    const recipe = recipes[0];
+    const recipe = recipes[10];
 
     console.log(
       recipe.recipeInfos.map((info) => {
         return info;
       })
     );
-    const getIngredient = marked(recipe.recipeIngredients);
     return (
       <div>
         <div className="recipeImage">
-          <img src={recipe.recipeImage.fields.file.url} alt=""></img>
+          <img
+            width="300px"
+            src={recipe.recipeImage.fields.file.url}
+            alt=""
+          ></img>
         </div>
 
         <div className="recipeTitle">
@@ -35,8 +37,7 @@ export default function Recipe({ recipes, isLoading, error }) {
         </div>
 
         <div className="ingedients">
-          {" "}
-          <section dangerouslySetInnerHTML={{ __html: getIngredient }} />{" "}
+          <p>{recipe.recipeIngredients} </p>
         </div>
 
         <div className="instructions">
