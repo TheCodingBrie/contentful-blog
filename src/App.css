@@ -1,149 +1,154 @@
-.imgplaceholder{
-    width: 100px;
-    height: 100px;
-    border: solid black;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.imgplaceholder {
+  width: 100px;
+  height: 100px;
+  border: solid black;
 }
-body, html{
-    box-sizing: border-box;
+body,
+html {
+  box-sizing: border-box;
+  font-family: Roboto;
 }
 
 .logo {
-    margin-top: 35px;
-    margin-left: 100px;
-    position: absolute;
-    z-index: 2;
-    cursor: pointer;
+  margin-top: 35px;
+  margin-left: 100px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .menu {
-
-    display: flex;
-    flex-direction: column;
-    padding-top : 150px;
-    padding-bottom: 20px;
-    align-items: center;
-    justify-content: space-around;
-    row-gap: 10px;
-    width: 15%;
-    z-index: 1;
-    position: absolute;
-    background-color: #656670;
-    opacity: .8;
-    border-radius: 5px;
-    margin: 10px;
-    border: 6px #908D9D solid;
-
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 10px;
+  width: 15%;
+  z-index: 1;
+  position: absolute;
+  background-color: #656670;
+  opacity: 0.8;
+  border-radius: 5px;
+  margin: 10px;
+  border: 6px #908d9d solid;
 }
 
 .no-menu {
-    opacity: 0;
-    display: none;
-
+  opacity: 0;
+  display: none;
 }
 
 .navlink {
-    display: flex;
-    width: 90%;
-    height: 50px;
+  display: flex;
+  width: 90%;
+  height: 50px;
 }
 
-.allRecipes, .countryMenu, .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
-    background-color: #908D9D;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
+.allRecipes,
+.countryMenu,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #908d9d;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
-.allRecipes:hover, .countryMenu:hover, .contact:hover {
-    background-color: #817782;
-    color: black;
+.allRecipes:hover,
+.countryMenu:hover,
+.contact:hover {
+  background-color: #817782;
+  color: black;
 }
 
 .countryMenu {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    padding: 12px 16px;
-    width: 90%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 12px 16px;
+  width: 90%;
 }
 
 .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #908D9D;
-    z-index: 1;
-    border-radius: 5px;
+  display: none;
+  position: absolute;
+  background-color: #908d9d;
+  z-index: 1;
+  border-radius: 5px;
 }
 
 .dropdown a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
 }
 
 .dropdown a:hover {
-    background-color: #817782;
-    color: black;
+  background-color: #817782;
+  color: black;
 }
 
 .countryMenu:hover .dropdown {
-    display: block;
+  display: block;
 }
 
 .globe {
-    z-index: 0;
-    position: absolute;
+  z-index: 0;
+  position: absolute;
 }
 
 .Overlay {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 10px;
-    left: 20%;
-    right: 20%;
-    bottom: 20px;
-    background-color: #656670;
-    border: 6px #908D9D solid;
-    border-radius: 5px;
-    opacity: 1;
-    padding: 0px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 10px;
+  left: 20%;
+  right: 20%;
+  bottom: 20px;
+  background-color: #656670;
+  border: 6px #908d9d solid;
+  border-radius: 5px;
+  opacity: 1;
+  padding: 0px;
 }
 
 .modal-topbar {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .modal-button {
-    background-color: #908D9D;
-    border-radius: 5px;
+  background-color: #908d9d;
+  border-radius: 5px;
 }
 
 .outlet {
-    position: inherit;
-    z-index: 1;
-    font-size: 100px;
+  position: inherit;
+  z-index: 1;
+  font-size: 100px;
 }
 
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .contact-title {
-    align-self: flex-start;
+  align-self: flex-start;
 }

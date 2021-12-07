@@ -6,54 +6,40 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Image from "react-bootstrap/Image";
 import "./RecipeCard.css";
 
-export default function RecipeCard() {
+export default function RecipeCard({ recipe }) {
+  console.log(recipe);
   return (
-    <CardGroup>
-      <Card
-        className="my-3  "
-        style={{
-          width: "25rem",
-          display: "flex",
-          flexdirection: "col",
-        }}
-      >
-        <Card.Header
-          className="display-4"
-          style={{
-            background: "yellow",
-          }}
-        >
-          Recipe Title
-        </Card.Header>
-        <Row className="g-2">
-          <Col xs="5">
-            <Card.Img img-fluid src="images/food.jpeg" />
-          </Col>
-          <Col xs="5">
-            <Card.Body>
-              <Card.Text className="text-start">
-                <h4>Recipe Description</h4> Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Sed eget dolor tempus, semper
-                mauris nec, ornare sapien. Nullam a malesuada libero. Nullam
-                accumsan tellus tristique, interdum diam quis, ultrices urna.
-              </Card.Text>
-              <Card.Text className="text-start h4">
-                Cooking Time : 3 hours
-              </Card.Text>
-              <Card.Img
-                className="float-left"
-                style={{ width: "70px" }}
-                src="images/gluten-free.png"
-              />
-              <Card.Img
-                className="float-left"
-                src=" images/vegetarian.png"
-                style={{ width: "70px" }}
-              />
-            </Card.Body>
-          </Col>
-        </Row>
+    <Col md={5}>
+      <Card className="  my-2" style={{ background: "#fcc5c5" }}>
+        <Card.Img
+          variant="top"
+          src={recipe.recipeImage.fields.file.url}
+        ></Card.Img>
+        <Card.Body>
+          <Card.Title className="text-center">
+            <h5>{recipe.title}</h5>
+          </Card.Title>
+          <Card.Text className="text-start">
+            <h6>Recipe Description:</h6>
+            {recipe.recipeDescription}
+          </Card.Text>
+          <Card.Text className="text-start h5">
+            {recipe.recipeInfos.map((info) => {
+              return <div>{info}</div>;
+            })}
+          </Card.Text>
+          <Card.Img
+            className="float-left"
+            style={{ width: "70px" }}
+            src="images/gluten-free.png"
+          />
+          <Card.Img
+            className="float-left"
+            src=" images/vegetarian.png"
+            style={{ width: "70px" }}
+          />
+        </Card.Body>
       </Card>
-    </CardGroup>
+    </Col>
   );
 }
