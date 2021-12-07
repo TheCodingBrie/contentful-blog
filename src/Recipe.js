@@ -1,19 +1,23 @@
 import { Button, Container } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import useGetEntries from "./useGetEntries";
+import { marked } from "marked";
+import "./Recipe.css";
 
 export default function Recipe({ recipes, isLoading, error }) {
   const displayRecipe = () => {
     if (error) return <div>Error, please reload</div>;
     if (isLoading) return <div>Loading</div>;
 
-    const recipe = recipes[0];
+    const recipe = recipes[10];
 
+    console.log(recipe.recipeInfos.map (info => {return info}));
+    const getIngredient = marked(recipe.recipeIngredients);
     return (
       <div>
         <div className="recipeImage">
           <img
-            width="300px"
+           
             src={recipe.recipeImage.fields.file.url}
             alt=""
           ></img>
@@ -24,7 +28,7 @@ export default function Recipe({ recipes, isLoading, error }) {
         </div>
 
         <div className="recipeInfos">
-          <p>{recipe.recipeInfos}</p>
+       { recipe.recipeInfos.map (info => {return <p >{info}</p>})}
         </div>
 
         <div className="recipeDescription">
@@ -33,7 +37,7 @@ export default function Recipe({ recipes, isLoading, error }) {
 
         <div className="ingedients">
           {" "}
-          <p>{recipe.recipeIngredients}</p>{" "}
+          <section dangerouslySetInnerHTML={{__html: getIngredient}}/>{" "}
         </div>
 
         <div className="instructions">
