@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/contentful-blog/static/css/main.cfb03a34.chunk.css",
+    "main.js": "/contentful-blog/static/js/main.06ffffc6.chunk.js",
+    "main.js.map": "/contentful-blog/static/js/main.06ffffc6.chunk.js.map",
+    "runtime-main.js": "/contentful-blog/static/js/runtime-main.bd111db0.js",
+    "runtime-main.js.map": "/contentful-blog/static/js/runtime-main.bd111db0.js.map",
+    "static/css/2.383c0125.chunk.css": "/contentful-blog/static/css/2.383c0125.chunk.css",
+    "static/js/2.d0f0ae30.chunk.js": "/contentful-blog/static/js/2.d0f0ae30.chunk.js",
+    "static/js/2.d0f0ae30.chunk.js.map": "/contentful-blog/static/js/2.d0f0ae30.chunk.js.map",
+    "index.html": "/contentful-blog/index.html",
+    "static/css/2.383c0125.chunk.css.map": "/contentful-blog/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.cfb03a34.chunk.css.map": "/contentful-blog/static/css/main.cfb03a34.chunk.css.map",
+    "static/js/2.d0f0ae30.chunk.js.LICENSE.txt": "/contentful-blog/static/js/2.d0f0ae30.chunk.js.LICENSE.txt",
+    "static/media/ccino.63c63535.jpg": "/contentful-blog/static/media/ccino.63c63535.jpg",
+    "static/media/logo.d1b714bd.png": "/contentful-blog/static/media/logo.d1b714bd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd111db0.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.d0f0ae30.chunk.js",
+    "static/css/main.cfb03a34.chunk.css",
+    "static/js/main.06ffffc6.chunk.js"
+  ]
+}
